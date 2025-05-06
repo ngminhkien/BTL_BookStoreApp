@@ -1,4 +1,6 @@
-﻿namespace BTL_BookStoreApp
+﻿using Repositories;
+
+namespace BTL_BookStoreApp
 {
     partial class BookManagerMainUI
     {
@@ -6,6 +8,14 @@
         ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+        //private readonly DbdesignQlchBansachContext _context;
+
+        //public BookManagerMainUI(DbdesignQlchBansachContext context)
+        //{
+        //    _context = context;
+        //    InitializeComponent();
+        //}
 
         /// <summary>
         ///  Clean up any resources being used.
@@ -30,9 +40,9 @@
         {
             lblBookManager = new Label();
             grbSearchCriteria = new GroupBox();
-            txtBookCategory = new TextBox();
+            txtDescription = new TextBox();
             txtBookName = new TextBox();
-            lblBookCategory = new Label();
+            lblDecription = new Label();
             lblBookName = new Label();
             btnSearch = new Button();
             lblBookList = new Label();
@@ -49,7 +59,8 @@
             // 
             lblBookManager.AutoSize = true;
             lblBookManager.Font = new Font("Segoe UI", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblBookManager.Location = new Point(12, -3);
+            lblBookManager.Location = new Point(-8, -4);
+            lblBookManager.Margin = new Padding(4, 0, 4, 0);
             lblBookManager.Name = "lblBookManager";
             lblBookManager.Size = new Size(445, 81);
             lblBookManager.TabIndex = 0;
@@ -57,50 +68,56 @@
             // 
             // grbSearchCriteria
             // 
-            grbSearchCriteria.Controls.Add(txtBookCategory);
+            grbSearchCriteria.Controls.Add(txtDescription);
             grbSearchCriteria.Controls.Add(txtBookName);
-            grbSearchCriteria.Controls.Add(lblBookCategory);
+            grbSearchCriteria.Controls.Add(lblDecription);
             grbSearchCriteria.Controls.Add(lblBookName);
             grbSearchCriteria.Controls.Add(btnSearch);
             grbSearchCriteria.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            grbSearchCriteria.Location = new Point(12, 81);
+            grbSearchCriteria.Location = new Point(16, 113);
+            grbSearchCriteria.Margin = new Padding(4);
             grbSearchCriteria.Name = "grbSearchCriteria";
-            grbSearchCriteria.Size = new Size(917, 109);
-            grbSearchCriteria.TabIndex = 1;
+            grbSearchCriteria.Padding = new Padding(4);
+            grbSearchCriteria.Size = new Size(1261, 153);
+            grbSearchCriteria.TabIndex = 0;
             grbSearchCriteria.TabStop = false;
             grbSearchCriteria.Text = " Search Criteria ";
             // 
-            // txtBookCategory
+            // txtDescription
             // 
-            txtBookCategory.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBookCategory.Location = new Point(580, 48);
-            txtBookCategory.Name = "txtBookCategory";
-            txtBookCategory.Size = new Size(125, 34);
-            txtBookCategory.TabIndex = 12;
+            txtDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDescription.Location = new Point(718, 67);
+            txtDescription.Margin = new Padding(4);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(250, 34);
+            txtDescription.TabIndex = 1;
             // 
             // txtBookName
             // 
             txtBookName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBookName.Location = new Point(137, 48);
+            txtBookName.Location = new Point(188, 67);
+            txtBookName.Margin = new Padding(4);
             txtBookName.Name = "txtBookName";
-            txtBookName.Size = new Size(125, 34);
-            txtBookName.TabIndex = 11;
+            txtBookName.Size = new Size(254, 34);
+            txtBookName.TabIndex = 0;
             // 
-            // lblBookCategory
+            // lblDecription
             // 
-            lblBookCategory.AutoSize = true;
-            lblBookCategory.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBookCategory.Location = new Point(389, 49);
-            lblBookCategory.Name = "lblBookCategory";
-            lblBookCategory.Size = new Size(142, 28);
-            lblBookCategory.TabIndex = 10;
-            lblBookCategory.Text = "Book Category";
+            lblDecription.AutoSize = true;
+            lblDecription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDecription.Location = new Point(535, 69);
+            lblDecription.Margin = new Padding(4, 0, 4, 0);
+            lblDecription.Name = "lblDecription";
+            lblDecription.Size = new Size(112, 28);
+            lblDecription.TabIndex = 10;
+            lblDecription.Text = "Description";
             // 
             // lblBookName
             // 
             lblBookName.AutoSize = true;
             lblBookName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBookName.Location = new Point(0, 49);
+            lblBookName.Location = new Point(0, 69);
+            lblBookName.Margin = new Padding(4, 0, 4, 0);
             lblBookName.Name = "lblBookName";
             lblBookName.Size = new Size(114, 28);
             lblBookName.TabIndex = 9;
@@ -109,18 +126,21 @@
             // btnSearch
             // 
             btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSearch.Location = new Point(770, 49);
+            btnSearch.Location = new Point(1059, 69);
+            btnSearch.Margin = new Padding(4);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(126, 38);
-            btnSearch.TabIndex = 4;
+            btnSearch.Size = new Size(173, 53);
+            btnSearch.TabIndex = 2;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // lblBookList
             // 
             lblBookList.AutoSize = true;
             lblBookList.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBookList.Location = new Point(12, 193);
+            lblBookList.Location = new Point(16, 270);
+            lblBookList.Margin = new Padding(4, 0, 4, 0);
             lblBookList.Name = "lblBookList";
             lblBookList.Size = new Size(91, 28);
             lblBookList.TabIndex = 2;
@@ -129,67 +149,80 @@
             // dgvBookList
             // 
             dgvBookList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBookList.Location = new Point(12, 233);
+            dgvBookList.Location = new Point(16, 326);
+            dgvBookList.Margin = new Padding(4);
             dgvBookList.Name = "dgvBookList";
             dgvBookList.RowHeadersWidth = 51;
-            dgvBookList.Size = new Size(705, 308);
+            dgvBookList.Size = new Size(969, 431);
             dgvBookList.TabIndex = 3;
+            dgvBookList.SelectionChanged += dgvBookList_SelectionChanged;
             // 
             // btnCreate
             // 
             btnCreate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCreate.Location = new Point(782, 233);
+            btnCreate.Location = new Point(1075, 326);
+            btnCreate.Margin = new Padding(4);
             btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(126, 38);
-            btnCreate.TabIndex = 5;
+            btnCreate.Size = new Size(173, 53);
+            btnCreate.TabIndex = 1;
             btnCreate.Text = "Create";
             btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(782, 327);
+            btnUpdate.Location = new Point(1075, 426);
+            btnUpdate.Margin = new Padding(4);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(126, 38);
-            btnUpdate.TabIndex = 6;
+            btnUpdate.Size = new Size(173, 53);
+            btnUpdate.TabIndex = 2;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
             btnDelete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDelete.Location = new Point(782, 412);
+            btnDelete.Location = new Point(1075, 529);
+            btnDelete.Margin = new Padding(4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(126, 38);
-            btnDelete.TabIndex = 7;
+            btnDelete.Size = new Size(173, 53);
+            btnDelete.TabIndex = 3;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnExit
             // 
             btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnExit.Location = new Point(782, 503);
+            btnExit.Location = new Point(1075, 704);
+            btnExit.Margin = new Padding(4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(126, 38);
-            btnExit.TabIndex = 8;
+            btnExit.Size = new Size(173, 53);
+            btnExit.TabIndex = 4;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // BookManagerMainUI
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(941, 572);
+            ClientSize = new Size(1294, 801);
             Controls.Add(btnExit);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnCreate);
             Controls.Add(dgvBookList);
+            Controls.Add(lblBookManager);
             Controls.Add(lblBookList);
             Controls.Add(grbSearchCriteria);
-            Controls.Add(lblBookManager);
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(4);
             Name = "BookManagerMainUI";
             Text = "Book Manager";
+            Load += BookManagerMainUI_Load;
             grbSearchCriteria.ResumeLayout(false);
             grbSearchCriteria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBookList).EndInit();
@@ -208,9 +241,9 @@
         private Button btnUpdate;
         private Button btnDelete;
         private Button btnExit;
-        private TextBox txtBookCategory;
+        private TextBox txtDescription;
         private TextBox txtBookName;
-        private Label lblBookCategory;
+        private Label lblDecription;
         private Label lblBookName;
     }
 }

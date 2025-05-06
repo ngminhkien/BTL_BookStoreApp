@@ -1,4 +1,6 @@
-﻿namespace BTL_BookStoreApp.Book
+﻿using Repositories;
+
+namespace BTL_BookStoreApp.Book
 {
     partial class BookDetailForm
     {
@@ -6,6 +8,14 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+        //private readonly DbdesignQlchBansachContext _context;
+
+        //public BookDetailForm(DbdesignQlchBansachContext context)
+        //{
+        //    _context = context;
+        //    InitializeComponent();
+        //}
 
         /// <summary>
         /// Clean up any resources being used.
@@ -30,10 +40,14 @@
         {
             lblHeader = new Label();
             grbBookInfo = new GroupBox();
-            dtpPublicationDate = new DateTimePicker();
+            dtpPubDate = new DateTimePicker();
+            cboAuthor = new ComboBox();
+            cboPublisher = new ComboBox();
+            cboBookCategory = new ComboBox();
+            txtSellPrince = new TextBox();
+            lblSellPrince = new Label();
             txtDescription = new TextBox();
             txtQuantity = new TextBox();
-            txtSellPrince = new TextBox();
             txtImportPrince = new TextBox();
             txtBookName = new TextBox();
             txtBookId = new TextBox();
@@ -43,15 +57,11 @@
             lblPubDate = new Label();
             lblBookCategory = new Label();
             lblQuantity = new Label();
-            lblSellPrince = new Label();
             lblAuthor = new Label();
             lblPublisher = new Label();
             lblImportPrince = new Label();
             btnSave = new Button();
             btnCancel = new Button();
-            cboBookCategory = new ComboBox();
-            cboPublisher = new ComboBox();
-            cboAuthor = new ComboBox();
             grbBookInfo.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,13 +77,14 @@
             // 
             // grbBookInfo
             // 
+            grbBookInfo.Controls.Add(dtpPubDate);
             grbBookInfo.Controls.Add(cboAuthor);
             grbBookInfo.Controls.Add(cboPublisher);
             grbBookInfo.Controls.Add(cboBookCategory);
-            grbBookInfo.Controls.Add(dtpPublicationDate);
+            grbBookInfo.Controls.Add(txtSellPrince);
+            grbBookInfo.Controls.Add(lblSellPrince);
             grbBookInfo.Controls.Add(txtDescription);
             grbBookInfo.Controls.Add(txtQuantity);
-            grbBookInfo.Controls.Add(txtSellPrince);
             grbBookInfo.Controls.Add(txtImportPrince);
             grbBookInfo.Controls.Add(txtBookName);
             grbBookInfo.Controls.Add(txtBookId);
@@ -83,25 +94,68 @@
             grbBookInfo.Controls.Add(lblPubDate);
             grbBookInfo.Controls.Add(lblBookCategory);
             grbBookInfo.Controls.Add(lblQuantity);
-            grbBookInfo.Controls.Add(lblSellPrince);
             grbBookInfo.Controls.Add(lblAuthor);
             grbBookInfo.Controls.Add(lblPublisher);
             grbBookInfo.Controls.Add(lblImportPrince);
             grbBookInfo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grbBookInfo.Location = new Point(12, 105);
             grbBookInfo.Name = "grbBookInfo";
-            grbBookInfo.Size = new Size(772, 433);
-            grbBookInfo.TabIndex = 2;
+            grbBookInfo.Size = new Size(772, 434);
+            grbBookInfo.TabIndex = 0;
             grbBookInfo.TabStop = false;
             grbBookInfo.Text = " Book Info ";
             // 
-            // dtpPublicationDate
+            // dtpPubDate
             // 
-            dtpPublicationDate.Format = DateTimePickerFormat.Short;
-            dtpPublicationDate.Location = new Point(126, 246);
-            dtpPublicationDate.Name = "dtpPublicationDate";
-            dtpPublicationDate.Size = new Size(208, 34);
-            dtpPublicationDate.TabIndex = 20;
+            dtpPubDate.Format = DateTimePickerFormat.Short;
+            dtpPubDate.Location = new Point(126, 252);
+            dtpPubDate.Name = "dtpPubDate";
+            dtpPubDate.Size = new Size(185, 34);
+            dtpPubDate.TabIndex = 13;
+            // 
+            // cboAuthor
+            // 
+            cboAuthor.FormattingEnabled = true;
+            cboAuthor.Location = new Point(126, 380);
+            cboAuthor.Name = "cboAuthor";
+            cboAuthor.Size = new Size(247, 36);
+            cboAuthor.TabIndex = 8;
+            cboAuthor.SelectedIndexChanged += cboAuthor_SelectedIndexChanged;
+            // 
+            // cboPublisher
+            // 
+            cboPublisher.FormattingEnabled = true;
+            cboPublisher.Location = new Point(572, 378);
+            cboPublisher.Name = "cboPublisher";
+            cboPublisher.Size = new Size(185, 36);
+            cboPublisher.TabIndex = 9;
+            cboPublisher.SelectedIndexChanged += cboPublisher_SelectedIndexChanged;
+            // 
+            // cboBookCategory
+            // 
+            cboBookCategory.FormattingEnabled = true;
+            cboBookCategory.Location = new Point(572, 246);
+            cboBookCategory.Name = "cboBookCategory";
+            cboBookCategory.Size = new Size(185, 36);
+            cboBookCategory.TabIndex = 4;
+            cboBookCategory.SelectedIndexChanged += cboBookCategory_SelectedIndexChanged;
+            // 
+            // txtSellPrince
+            // 
+            txtSellPrince.Location = new Point(636, 314);
+            txtSellPrince.Name = "txtSellPrince";
+            txtSellPrince.Size = new Size(125, 34);
+            txtSellPrince.TabIndex = 6;
+            // 
+            // lblSellPrince
+            // 
+            lblSellPrince.AutoSize = true;
+            lblSellPrince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSellPrince.Location = new Point(527, 318);
+            lblSellPrince.Name = "lblSellPrince";
+            lblSellPrince.Size = new Size(103, 28);
+            lblSellPrince.TabIndex = 9;
+            lblSellPrince.Text = "SelltPrince";
             // 
             // txtDescription
             // 
@@ -110,42 +164,38 @@
             txtDescription.Name = "txtDescription";
             txtDescription.ScrollBars = ScrollBars.Vertical;
             txtDescription.Size = new Size(627, 120);
-            txtDescription.TabIndex = 19;
+            txtDescription.TabIndex = 2;
             // 
             // txtQuantity
             // 
             txtQuantity.Location = new Point(126, 314);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(125, 34);
-            txtQuantity.TabIndex = 18;
-            // 
-            // txtSellPrince
-            // 
-            txtSellPrince.Location = new Point(366, 314);
-            txtSellPrince.Name = "txtSellPrince";
-            txtSellPrince.Size = new Size(125, 34);
-            txtSellPrince.TabIndex = 16;
+            txtQuantity.TabIndex = 5;
+            txtQuantity.KeyPress += txtQuantity_KeyPress;
             // 
             // txtImportPrince
             // 
-            txtImportPrince.Location = new Point(628, 314);
+            txtImportPrince.Location = new Point(387, 314);
             txtImportPrince.Name = "txtImportPrince";
             txtImportPrince.Size = new Size(125, 34);
-            txtImportPrince.TabIndex = 15;
+            txtImportPrince.TabIndex = 7;
+            txtImportPrince.TextChanged += txtImportPrince_TextChanged;
+            txtImportPrince.KeyPress += txtImportPrince_KeyPress;
             // 
             // txtBookName
             // 
-            txtBookName.Location = new Point(572, 51);
+            txtBookName.Location = new Point(538, 51);
             txtBookName.Name = "txtBookName";
-            txtBookName.Size = new Size(181, 34);
-            txtBookName.TabIndex = 14;
+            txtBookName.Size = new Size(215, 34);
+            txtBookName.TabIndex = 1;
             // 
             // txtBookId
             // 
             txtBookId.Location = new Point(126, 51);
             txtBookId.Name = "txtBookId";
             txtBookId.Size = new Size(150, 34);
-            txtBookId.TabIndex = 13;
+            txtBookId.TabIndex = 0;
             // 
             // lblBookId
             // 
@@ -191,7 +241,7 @@
             // 
             lblBookCategory.AutoSize = true;
             lblBookCategory.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBookCategory.Location = new Point(418, 247);
+            lblBookCategory.Location = new Point(418, 246);
             lblBookCategory.Name = "lblBookCategory";
             lblBookCategory.Size = new Size(137, 28);
             lblBookCategory.TabIndex = 7;
@@ -207,16 +257,6 @@
             lblQuantity.Size = new Size(88, 28);
             lblQuantity.TabIndex = 8;
             lblQuantity.Text = "Quantity";
-            // 
-            // lblSellPrince
-            // 
-            lblSellPrince.AutoSize = true;
-            lblSellPrince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSellPrince.Location = new Point(257, 314);
-            lblSellPrince.Name = "lblSellPrince";
-            lblSellPrince.Size = new Size(103, 28);
-            lblSellPrince.TabIndex = 9;
-            lblSellPrince.Text = "SelltPrince";
             // 
             // lblAuthor
             // 
@@ -242,7 +282,7 @@
             // 
             lblImportPrince.AutoSize = true;
             lblImportPrince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblImportPrince.Location = new Point(497, 314);
+            lblImportPrince.Location = new Point(256, 314);
             lblImportPrince.Name = "lblImportPrince";
             lblImportPrince.Size = new Size(125, 28);
             lblImportPrince.TabIndex = 10;
@@ -254,9 +294,10 @@
             btnSave.Location = new Point(790, 119);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(126, 38);
-            btnSave.TabIndex = 3;
+            btnSave.TabIndex = 1;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
@@ -264,33 +305,10 @@
             btnCancel.Location = new Point(790, 189);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(126, 38);
-            btnCancel.TabIndex = 4;
+            btnCancel.TabIndex = 2;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // cboBookCategory
-            // 
-            cboBookCategory.FormattingEnabled = true;
-            cboBookCategory.Location = new Point(572, 247);
-            cboBookCategory.Name = "cboBookCategory";
-            cboBookCategory.Size = new Size(185, 36);
-            cboBookCategory.TabIndex = 23;
-            // 
-            // cboPublisher
-            // 
-            cboPublisher.FormattingEnabled = true;
-            cboPublisher.Location = new Point(572, 378);
-            cboPublisher.Name = "cboPublisher";
-            cboPublisher.Size = new Size(185, 36);
-            cboPublisher.TabIndex = 24;
-            // 
-            // cboAuthor
-            // 
-            cboAuthor.FormattingEnabled = true;
-            cboAuthor.Location = new Point(126, 380);
-            cboAuthor.Name = "cboAuthor";
-            cboAuthor.Size = new Size(247, 36);
-            cboAuthor.TabIndex = 25;
+            btnCancel.Click += btnCancel_Click;
             // 
             // BookDetailForm
             // 
@@ -301,9 +319,11 @@
             Controls.Add(btnSave);
             Controls.Add(grbBookInfo);
             Controls.Add(lblHeader);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MinimizeBox = false;
             Name = "BookDetailForm";
             Text = "BookDetailForm";
+            Load += BookDetailForm_Load;
             grbBookInfo.ResumeLayout(false);
             grbBookInfo.PerformLayout();
             ResumeLayout(false);
@@ -332,9 +352,9 @@
         private TextBox txtBookName;
         private TextBox txtBookId;
         private TextBox txtDescription;
-        private DateTimePicker dtpPublicationDate;
         private ComboBox cboBookCategory;
         private ComboBox cboAuthor;
         private ComboBox cboPublisher;
+        private DateTimePicker dtpPubDate;
     }
 }

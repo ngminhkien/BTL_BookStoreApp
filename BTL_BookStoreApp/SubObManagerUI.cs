@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_BookStoreApp.Book
+namespace BTL_BookStoreApp
 {
-    public partial class BookDetailForm : Form
+    public partial class SubObManagerUI : Form
     {
-        public BookDetailForm()
+        public SubObManagerUI()
         {
             InitializeComponent();
         }

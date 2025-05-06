@@ -121,3 +121,10 @@ C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_Bo
 C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.pdb
 C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.genruntimeconfig.cache
 C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\ref\BTL_BookStoreApp.dll
+C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.LoginForm.resources
+C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.BookView.AuthorDetailForm.resources
+C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.BookView.BookCategoryDetailForm.resources
+C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.BookView.PublisherDetailForm.resources
+C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.SubObManagerUI.resources
+C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.BillView.SalesInvoiceDetailForm.resources
+C:\Users\PC\Desktop\CNTTB\Semester 4\ProgramWith.Net\BTL_BookStore\WorkOn\BTL_BookStoreApp\BTL_BookStoreApp\obj\Debug\net8.0-windows\BTL_BookStoreApp.BillView.SalesInvoiceMainUI.resources

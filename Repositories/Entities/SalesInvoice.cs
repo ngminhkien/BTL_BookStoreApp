@@ -11,7 +11,7 @@ public partial class SalesInvoice
 
     public string? EmployeeId { get; set; }
 
-    public DateOnly? InvoiceDate { get; set; }
+    public DateTime? InvoiceDate { get; set; }
 
     public double? TotalAmount { get; set; }
 

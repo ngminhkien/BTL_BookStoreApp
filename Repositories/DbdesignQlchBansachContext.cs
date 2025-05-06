@@ -42,7 +42,7 @@ public partial class DbdesignQlchBansachContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=(local);Database= DBDESIGN_QLCH_BANSACH;UID=sa;PWD=KIEN2005;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=(local);Database=DBDESIGN_QLCH_BANSACH;UID=sa;PWD=KIEN2005;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -58,6 +58,7 @@ public partial class DbdesignQlchBansachContext : DbContext
                 .IsFixedLength();
             entity.Property(e => e.Address).HasMaxLength(255);
             entity.Property(e => e.AuthorName).HasMaxLength(100);
+            entity.Property(e => e.BirthOfDate).HasColumnType("datetime");
             entity.Property(e => e.Gender).HasMaxLength(10);
         });
 
@@ -77,6 +78,7 @@ public partial class DbdesignQlchBansachContext : DbContext
             entity.Property(e => e.BookCategoryId).HasDefaultValue(1);
             entity.Property(e => e.BookName).HasMaxLength(100);
             entity.Property(e => e.Description).HasMaxLength(1000);
+            entity.Property(e => e.PublicationDate).HasColumnType("datetime");
             entity.Property(e => e.PublisherId)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -164,6 +166,7 @@ public partial class DbdesignQlchBansachContext : DbContext
                 .IsUnicode(false)
                 .HasDefaultValue("KH001")
                 .IsFixedLength();
+            entity.Property(e => e.InvoiceDate).HasColumnType("datetime");
             entity.Property(e => e.SupplierId)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -218,6 +221,7 @@ public partial class DbdesignQlchBansachContext : DbContext
                 .IsUnicode(false)
                 .HasDefaultValue("KH001")
                 .IsFixedLength();
+            entity.Property(e => e.InvoiceDate).HasColumnType("datetime");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.SalesInvoices)
                 .HasForeignKey(d => d.CustomerId)
