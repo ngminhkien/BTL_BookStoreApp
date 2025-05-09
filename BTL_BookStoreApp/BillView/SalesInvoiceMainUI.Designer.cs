@@ -81,6 +81,7 @@
             dgvSalesInvoiceList.RowHeadersWidth = 51;
             dgvSalesInvoiceList.Size = new Size(969, 364);
             dgvSalesInvoiceList.TabIndex = 4;
+            dgvSalesInvoiceList.SelectionChanged += dgvSalesInvoiceList_SelectionChanged;
             // 
             // lblSalesInvoiceList
             // 
@@ -103,6 +104,7 @@
             btnShow.TabIndex = 1;
             btnShow.Text = "Show";
             btnShow.UseVisualStyleBackColor = true;
+            btnShow.Click += btnShow_Click;
             // 
             // btnCRUD
             // 

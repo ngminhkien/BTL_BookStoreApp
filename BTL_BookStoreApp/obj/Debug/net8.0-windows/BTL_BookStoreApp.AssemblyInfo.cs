@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BTL_BookStoreApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48a961f35ad56a7d6ad3c8fd70cbe6a50716137a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b35acdf1ec6cdebc111947b0abafa98dbfc7c2e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("BTL_BookStoreApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BTL_BookStoreApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

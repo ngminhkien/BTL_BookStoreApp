@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             grbInvoiceInfo = new GroupBox();
+            txtNote = new TextBox();
+            mtbInvoiceDate = new MaskedTextBox();
             txtEmployeeID = new TextBox();
             lblEmployeeID = new Label();
             lblInvoiceDate = new Label();
             txtInvoiceId = new TextBox();
-            lblPhone = new Label();
+            lblCustomerId = new Label();
             lblInvoiceId = new Label();
             lblHeader = new Label();
             dgvBooksInfoDetails = new DataGridView();
@@ -43,39 +45,58 @@
             btnPrint = new Button();
             btnCancel = new Button();
             btnDelete = new Button();
-            mtbNote = new TextBox();
-            mtbInvoiceDate = new MaskedTextBox();
-            mtbPhone = new MaskedTextBox();
+            txtCustomerId = new TextBox();
             grbInvoiceInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBooksInfoDetails).BeginInit();
             SuspendLayout();
             // 
             // grbInvoiceInfo
             // 
-            grbInvoiceInfo.Controls.Add(mtbNote);
-            grbInvoiceInfo.Controls.Add(mtbPhone);
+            grbInvoiceInfo.Controls.Add(txtCustomerId);
+            grbInvoiceInfo.Controls.Add(txtNote);
             grbInvoiceInfo.Controls.Add(mtbInvoiceDate);
             grbInvoiceInfo.Controls.Add(txtEmployeeID);
             grbInvoiceInfo.Controls.Add(lblEmployeeID);
             grbInvoiceInfo.Controls.Add(lblInvoiceDate);
             grbInvoiceInfo.Controls.Add(txtInvoiceId);
-            grbInvoiceInfo.Controls.Add(lblPhone);
+            grbInvoiceInfo.Controls.Add(lblCustomerId);
             grbInvoiceInfo.Controls.Add(lblInvoiceId);
             grbInvoiceInfo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grbInvoiceInfo.Location = new Point(16, 109);
-            grbInvoiceInfo.Margin = new Padding(4, 4, 4, 4);
+            grbInvoiceInfo.Margin = new Padding(4);
             grbInvoiceInfo.Name = "grbInvoiceInfo";
-            grbInvoiceInfo.Padding = new Padding(4, 4, 4, 4);
+            grbInvoiceInfo.Padding = new Padding(4);
             grbInvoiceInfo.Size = new Size(1261, 223);
             grbInvoiceInfo.TabIndex = 3;
             grbInvoiceInfo.TabStop = false;
             grbInvoiceInfo.Text = "  Invoice Info ";
             // 
+            // txtNote
+            // 
+            txtNote.Location = new Point(824, 43);
+            txtNote.Margin = new Padding(6);
+            txtNote.Multiline = true;
+            txtNote.Name = "txtNote";
+            txtNote.ScrollBars = ScrollBars.Vertical;
+            txtNote.Size = new Size(426, 148);
+            txtNote.TabIndex = 23;
+            txtNote.Text = "Note here: ";
+            // 
+            // mtbInvoiceDate
+            // 
+            mtbInvoiceDate.Location = new Point(513, 146);
+            mtbInvoiceDate.Margin = new Padding(4);
+            mtbInvoiceDate.Mask = "00/00/0000 90:00";
+            mtbInvoiceDate.Name = "mtbInvoiceDate";
+            mtbInvoiceDate.Size = new Size(254, 34);
+            mtbInvoiceDate.TabIndex = 24;
+            mtbInvoiceDate.ValidatingType = typeof(DateTime);
+            // 
             // txtEmployeeID
             // 
             txtEmployeeID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmployeeID.Location = new Point(151, 146);
-            txtEmployeeID.Margin = new Padding(4, 4, 4, 4);
+            txtEmployeeID.Margin = new Padding(4);
             txtEmployeeID.Name = "txtEmployeeID";
             txtEmployeeID.Size = new Size(157, 34);
             txtEmployeeID.TabIndex = 12;
@@ -106,21 +127,21 @@
             // 
             txtInvoiceId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtInvoiceId.Location = new Point(151, 62);
-            txtInvoiceId.Margin = new Padding(4, 4, 4, 4);
+            txtInvoiceId.Margin = new Padding(4);
             txtInvoiceId.Name = "txtInvoiceId";
             txtInvoiceId.Size = new Size(157, 34);
             txtInvoiceId.TabIndex = 0;
             // 
-            // lblPhone
+            // lblCustomerId
             // 
-            lblPhone.AutoSize = true;
-            lblPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPhone.Location = new Point(344, 66);
-            lblPhone.Margin = new Padding(4, 0, 4, 0);
-            lblPhone.Name = "lblPhone";
-            lblPhone.Size = new Size(67, 28);
-            lblPhone.TabIndex = 10;
-            lblPhone.Text = "Phone";
+            lblCustomerId.AutoSize = true;
+            lblCustomerId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCustomerId.Location = new Point(344, 66);
+            lblCustomerId.Margin = new Padding(4, 0, 4, 0);
+            lblCustomerId.Name = "lblCustomerId";
+            lblCustomerId.Size = new Size(76, 28);
+            lblCustomerId.TabIndex = 10;
+            lblCustomerId.Text = "CTM ID";
             // 
             // lblInvoiceId
             // 
@@ -148,7 +169,7 @@
             // 
             dgvBooksInfoDetails.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBooksInfoDetails.Location = new Point(16, 379);
-            dgvBooksInfoDetails.Margin = new Padding(4, 4, 4, 4);
+            dgvBooksInfoDetails.Margin = new Padding(4);
             dgvBooksInfoDetails.Name = "dgvBooksInfoDetails";
             dgvBooksInfoDetails.RowHeadersWidth = 51;
             dgvBooksInfoDetails.Size = new Size(969, 388);
@@ -170,7 +191,7 @@
             btnSave.FlatStyle = FlatStyle.System;
             btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSave.Location = new Point(1068, 550);
-            btnSave.Margin = new Padding(4, 4, 4, 4);
+            btnSave.Margin = new Padding(4);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(173, 53);
             btnSave.TabIndex = 18;
@@ -181,7 +202,7 @@
             // 
             btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdd.Location = new Point(1068, 379);
-            btnAdd.Margin = new Padding(4, 4, 4, 4);
+            btnAdd.Margin = new Padding(4);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(173, 53);
             btnAdd.TabIndex = 19;
@@ -193,7 +214,7 @@
             btnPrint.FlatStyle = FlatStyle.System;
             btnPrint.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPrint.Location = new Point(1068, 612);
-            btnPrint.Margin = new Padding(4, 4, 4, 4);
+            btnPrint.Margin = new Padding(4);
             btnPrint.Name = "btnPrint";
             btnPrint.Size = new Size(173, 53);
             btnPrint.TabIndex = 20;
@@ -205,7 +226,7 @@
             btnCancel.FlatStyle = FlatStyle.System;
             btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancel.Location = new Point(1068, 714);
-            btnCancel.Margin = new Padding(4, 4, 4, 4);
+            btnCancel.Margin = new Padding(4);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(173, 53);
             btnCancel.TabIndex = 21;
@@ -217,42 +238,21 @@
             btnDelete.FlatStyle = FlatStyle.System;
             btnDelete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDelete.Location = new Point(1068, 441);
-            btnDelete.Margin = new Padding(4, 4, 4, 4);
+            btnDelete.Margin = new Padding(4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(173, 53);
             btnDelete.TabIndex = 22;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             // 
-            // mtbNote
+            // txtCustomerId
             // 
-            mtbNote.Location = new Point(824, 43);
-            mtbNote.Margin = new Padding(6, 6, 6, 6);
-            mtbNote.Multiline = true;
-            mtbNote.Name = "mtbNote";
-            mtbNote.ScrollBars = ScrollBars.Vertical;
-            mtbNote.Size = new Size(426, 148);
-            mtbNote.TabIndex = 23;
-            mtbNote.Text = "Note here: ";
-            // 
-            // mtbInvoiceDate
-            // 
-            mtbInvoiceDate.Location = new Point(513, 146);
-            mtbInvoiceDate.Margin = new Padding(4, 4, 4, 4);
-            mtbInvoiceDate.Mask = "00/00/0000 90:00";
-            mtbInvoiceDate.Name = "mtbInvoiceDate";
-            mtbInvoiceDate.Size = new Size(254, 34);
-            mtbInvoiceDate.TabIndex = 24;
-            mtbInvoiceDate.ValidatingType = typeof(DateTime);
-            // 
-            // mtbPhone
-            // 
-            mtbPhone.Location = new Point(513, 57);
-            mtbPhone.Margin = new Padding(4, 4, 4, 4);
-            mtbPhone.Mask = "0000.000.000";
-            mtbPhone.Name = "mtbPhone";
-            mtbPhone.Size = new Size(254, 34);
-            mtbPhone.TabIndex = 25;
+            txtCustomerId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCustomerId.Location = new Point(513, 60);
+            txtCustomerId.Margin = new Padding(4);
+            txtCustomerId.Name = "txtCustomerId";
+            txtCustomerId.Size = new Size(254, 34);
+            txtCustomerId.TabIndex = 26;
             // 
             // SalesInvoiceDetailForm
             // 
@@ -269,8 +269,9 @@
             Controls.Add(lblHeader);
             Controls.Add(grbInvoiceInfo);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "SalesInvoiceDetailForm";
+            Load += SalesInvoiceDetailForm_Load;
             grbInvoiceInfo.ResumeLayout(false);
             grbInvoiceInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBooksInfoDetails).EndInit();
@@ -285,7 +286,7 @@
         private Label lblEmployeeID;
         private Label lblInvoiceDate;
         private TextBox txtInvoiceId;
-        private Label lblPhone;
+        private Label lblCustomerId;
         private Label lblInvoiceId;
         private Label lblHeader;
         private DataGridView dgvBooksInfoDetails;
@@ -295,8 +296,8 @@
         private Button btnPrint;
         private Button btnCancel;
         private Button btnDelete;
-        private TextBox mtbNote;
+        private TextBox txtNote;
         private MaskedTextBox mtbInvoiceDate;
-        private MaskedTextBox mtbPhone;
+        private TextBox txtCustomerId;
     }
 }
