@@ -15,6 +15,8 @@ public partial class SalesInvoice
 
     public double? TotalAmount { get; set; }
 
+    public string? Note { get; set; }
+
     public virtual Customer? Customer { get; set; }
 
     public virtual Employee? Employee { get; set; }

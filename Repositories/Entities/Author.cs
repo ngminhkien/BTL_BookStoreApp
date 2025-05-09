@@ -9,7 +9,7 @@ public partial class Author
 
     public string? AuthorName { get; set; }
 
-    public DateTime? BirthOfDate { get; set; }
+    public DateTime BirthOfDate { get; set; }
 
     public string? Gender { get; set; }
 

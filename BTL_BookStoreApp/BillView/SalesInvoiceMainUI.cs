@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.IdentityModel.Tokens;
 using Repositories.Entities;
 using Services;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -19,6 +21,7 @@ namespace BTL_BookStoreApp.BillView
         CabinetService<SalesInvoice> _service = new();
         CabinetService<Employee> _eSevice = new();
         CabinetService<Customer> _cService = new();
+
         public SalesInvoiceMainUI()
         {
             InitializeComponent();
@@ -47,13 +50,8 @@ namespace BTL_BookStoreApp.BillView
 
         private void SalesInvoiceMainUI_Load(object sender, EventArgs e)
         {
-            Employee employee = new() { EmployeeId = "", EmployeeName = "" };
-            List<Employee> list = _eSevice.GetAll();
-            list.Add(employee);
-            cboEmployeeName.DataSource = null;
-            cboEmployeeName.DataSource = list;
-            cboEmployeeName.DisplayMember = "EmployeeName";
-            cboEmployeeName.ValueMember = "EmployeeId";
+            ComboBoxHelper comboBoxHelper = new ComboBoxHelper();
+            comboBoxHelper.LoadToComboBox(cboEmployeeName, _eSevice.GetAll(), a => a.EmployeeId, a => a.EmployeeName, "");
 
             FillDataGridView();
         }
@@ -61,12 +59,51 @@ namespace BTL_BookStoreApp.BillView
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvSalesInvoiceList.DataSource = null;
-            string rawPhone = mtbPhone.Text.Replace(".", "");
-
-
-            dgvSalesInvoiceList.DataSource = _service.GetAll().Where(delegate (SalesInvoice x)
+            // Lấy dữ liệu từ các ô nhập
+            string inlId = txtInvoiceId.Text;
+            //fix DateTime?
+            DateTime? invoiceDate = null;
+            DateTime tempDate;
+            bool isValid = DateTime.TryParseExact(
+                            mtbInvoiceDate.Text,
+                            "MM/dd/yyyy HH:mm",
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.None,
+                            out tempDate
+             );
+            if (isValid)
             {
-                return x.InvoiceId == int.Parse(txtInvoiceId.Text) || x.EmployeeId.Contains(cboEmployeeName.SelectedValue.ToString());
+                invoiceDate = tempDate;
+            }
+
+            var result = (from si in _service.GetAll()
+                          join cus in _cService.GetAll()
+                          on si.CustomerId equals cus.CustomerId
+                          join em in  _eSevice.GetAll() 
+                          on si.EmployeeId equals em.EmployeeId
+                          select new
+                          {
+                              si.InvoiceId,
+                              si.InvoiceDate,
+                              si.CustomerId,
+                              si.EmployeeId,
+                              cus.Phone,
+                              cus.CustomerName,
+                              em.EmployeeName,
+                              si.TotalAmount
+                          }).ToList();
+
+            dgvSalesInvoiceList.DataSource = result.Where(i =>
+            {
+                bool matchInvoiceId = string.IsNullOrEmpty(txtInvoiceId.Text) || (int.TryParse(txtInvoiceId.Text, out int invoiceId) && i.InvoiceId == invoiceId);
+
+                bool matchPhone = !mtbPhone.MaskFull || (!string.IsNullOrEmpty(i.Phone) && i.Phone.Contains(mtbPhone.Text.Replace(".", "")));
+
+                bool matchDate = !mtbInvoiceDate.MaskFull || (invoiceDate.HasValue && i.InvoiceDate == invoiceDate.Value);
+
+                bool matchEmName = string.IsNullOrEmpty(cboEmployeeName.Text) || i.EmployeeName.ToLower().Contains(cboEmployeeName.Text.ToLower());
+
+                return  matchPhone && matchDate && matchInvoiceId && matchEmName;
             }).ToList();
         }
 

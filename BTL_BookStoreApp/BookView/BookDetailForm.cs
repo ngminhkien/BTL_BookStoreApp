@@ -53,7 +53,7 @@ namespace BTL_BookStoreApp.Book
                 txtImportPrince.Text = SelectedBook.ImportPrince.ToString();
                 txtSellPrince.Text = SelectedBook.SelltPrince.ToString();
                 cboAuthor.SelectedValue = SelectedBook.AuthorId;
-                cboBookCategory.SelectedValue = SelectedBook.BookCategoryId;
+                cboBookCategory.SelectedValue = SelectedBook.BookCategoryId.ToString();
                 cboPublisher.SelectedValue = SelectedBook.PublisherId;
             }
             else

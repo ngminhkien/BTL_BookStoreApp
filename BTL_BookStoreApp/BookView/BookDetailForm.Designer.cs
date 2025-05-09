@@ -40,10 +40,10 @@ namespace BTL_BookStoreApp.Book
         {
             lblHeader = new Label();
             grbBookInfo = new GroupBox();
+            cboBookCategory = new ComboBox();
             dtpPubDate = new DateTimePicker();
             cboAuthor = new ComboBox();
             cboPublisher = new ComboBox();
-            cboBookCategory = new ComboBox();
             txtSellPrince = new TextBox();
             lblSellPrince = new Label();
             txtDescription = new TextBox();
@@ -77,10 +77,10 @@ namespace BTL_BookStoreApp.Book
             // 
             // grbBookInfo
             // 
+            grbBookInfo.Controls.Add(cboBookCategory);
             grbBookInfo.Controls.Add(dtpPubDate);
             grbBookInfo.Controls.Add(cboAuthor);
             grbBookInfo.Controls.Add(cboPublisher);
-            grbBookInfo.Controls.Add(cboBookCategory);
             grbBookInfo.Controls.Add(txtSellPrince);
             grbBookInfo.Controls.Add(lblSellPrince);
             grbBookInfo.Controls.Add(txtDescription);
@@ -105,6 +105,14 @@ namespace BTL_BookStoreApp.Book
             grbBookInfo.TabStop = false;
             grbBookInfo.Text = " Book Info ";
             // 
+            // cboBookCategory
+            // 
+            cboBookCategory.FormattingEnabled = true;
+            cboBookCategory.Location = new Point(568, 254);
+            cboBookCategory.Name = "cboBookCategory";
+            cboBookCategory.Size = new Size(185, 36);
+            cboBookCategory.TabIndex = 14;
+            // 
             // dtpPubDate
             // 
             dtpPubDate.Format = DateTimePickerFormat.Short;
@@ -125,20 +133,11 @@ namespace BTL_BookStoreApp.Book
             // cboPublisher
             // 
             cboPublisher.FormattingEnabled = true;
-            cboPublisher.Location = new Point(572, 378);
+            cboPublisher.Location = new Point(568, 383);
             cboPublisher.Name = "cboPublisher";
             cboPublisher.Size = new Size(185, 36);
             cboPublisher.TabIndex = 9;
             cboPublisher.SelectedIndexChanged += cboPublisher_SelectedIndexChanged;
-            // 
-            // cboBookCategory
-            // 
-            cboBookCategory.FormattingEnabled = true;
-            cboBookCategory.Location = new Point(572, 246);
-            cboBookCategory.Name = "cboBookCategory";
-            cboBookCategory.Size = new Size(185, 36);
-            cboBookCategory.TabIndex = 4;
-            cboBookCategory.SelectedIndexChanged += cboBookCategory_SelectedIndexChanged;
             // 
             // txtSellPrince
             // 
@@ -231,7 +230,7 @@ namespace BTL_BookStoreApp.Book
             // 
             lblPubDate.AutoSize = true;
             lblPubDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPubDate.Location = new Point(16, 252);
+            lblPubDate.Location = new Point(16, 257);
             lblPubDate.Name = "lblPubDate";
             lblPubDate.Size = new Size(92, 28);
             lblPubDate.TabIndex = 6;
@@ -241,7 +240,7 @@ namespace BTL_BookStoreApp.Book
             // 
             lblBookCategory.AutoSize = true;
             lblBookCategory.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBookCategory.Location = new Point(418, 246);
+            lblBookCategory.Location = new Point(418, 257);
             lblBookCategory.Name = "lblBookCategory";
             lblBookCategory.Size = new Size(137, 28);
             lblBookCategory.TabIndex = 7;
@@ -272,7 +271,7 @@ namespace BTL_BookStoreApp.Book
             // 
             lblPublisher.AutoSize = true;
             lblPublisher.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPublisher.Location = new Point(418, 380);
+            lblPublisher.Location = new Point(418, 386);
             lblPublisher.Name = "lblPublisher";
             lblPublisher.Size = new Size(92, 28);
             lblPublisher.TabIndex = 12;
@@ -352,9 +351,9 @@ namespace BTL_BookStoreApp.Book
         private TextBox txtBookName;
         private TextBox txtBookId;
         private TextBox txtDescription;
-        private ComboBox cboBookCategory;
         private ComboBox cboAuthor;
         private ComboBox cboPublisher;
         private DateTimePicker dtpPubDate;
+        private ComboBox cboBookCategory;
     }
 }

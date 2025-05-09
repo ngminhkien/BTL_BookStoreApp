@@ -15,6 +15,8 @@ public partial class PurchaseInvoice
 
     public double? TotalAmount { get; set; }
 
+    public string? Note { get; set; }
+
     public virtual Employee? Employee { get; set; }
 
     public virtual ICollection<PurchaseInvoiceDetail> PurchaseInvoiceDetails { get; set; } = new List<PurchaseInvoiceDetail>();

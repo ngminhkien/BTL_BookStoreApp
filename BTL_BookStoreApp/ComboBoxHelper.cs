@@ -35,7 +35,6 @@ namespace BTL_BookStoreApp
             comboBox.DisplayMember = "Name";
             comboBox.ValueMember = "Id";
         }
-
     }
 }
 

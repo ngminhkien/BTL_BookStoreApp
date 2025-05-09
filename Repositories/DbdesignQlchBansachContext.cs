@@ -167,6 +167,7 @@ public partial class DbdesignQlchBansachContext : DbContext
                 .HasDefaultValue("KH001")
                 .IsFixedLength();
             entity.Property(e => e.InvoiceDate).HasColumnType("datetime");
+            entity.Property(e => e.Note).HasMaxLength(200);
             entity.Property(e => e.SupplierId)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -222,6 +223,7 @@ public partial class DbdesignQlchBansachContext : DbContext
                 .HasDefaultValue("KH001")
                 .IsFixedLength();
             entity.Property(e => e.InvoiceDate).HasColumnType("datetime");
+            entity.Property(e => e.Note).HasMaxLength(200);
 
             entity.HasOne(d => d.Customer).WithMany(p => p.SalesInvoices)
                 .HasForeignKey(d => d.CustomerId)

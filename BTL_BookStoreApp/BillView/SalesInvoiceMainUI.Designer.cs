@@ -38,7 +38,7 @@
             grbSearchCriteria = new GroupBox();
             cboEmployeeName = new ComboBox();
             mtbPhone = new MaskedTextBox();
-            maskedTextBox1 = new MaskedTextBox();
+            mtbInvoiceDate = new MaskedTextBox();
             lblEmployeeName = new Label();
             lblInvoiceDate = new Label();
             txtInvoiceId = new TextBox();
@@ -52,7 +52,7 @@
             // 
             lblHeader.AutoSize = true;
             lblHeader.Font = new Font("Segoe UI", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblHeader.Location = new Point(-1, -7);
+            lblHeader.Location = new Point(-2, -4);
             lblHeader.Margin = new Padding(4, 0, 4, 0);
             lblHeader.Name = "lblHeader";
             lblHeader.Size = new Size(662, 81);
@@ -66,13 +66,14 @@
             btnSearch.Margin = new Padding(4);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(173, 53);
-            btnSearch.TabIndex = 2;
+            btnSearch.TabIndex = 4;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
             btnSearch.Click += btnSearch_Click;
             // 
             // dgvSalesInvoiceList
             // 
+            dgvSalesInvoiceList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dgvSalesInvoiceList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSalesInvoiceList.Location = new Point(16, 400);
             dgvSalesInvoiceList.Margin = new Padding(4);
@@ -99,7 +100,7 @@
             btnShow.Margin = new Padding(4);
             btnShow.Name = "btnShow";
             btnShow.Size = new Size(173, 53);
-            btnShow.TabIndex = 6;
+            btnShow.TabIndex = 1;
             btnShow.Text = "Show";
             btnShow.UseVisualStyleBackColor = true;
             // 
@@ -110,7 +111,7 @@
             btnCRUD.Margin = new Padding(4);
             btnCRUD.Name = "btnCRUD";
             btnCRUD.Size = new Size(173, 53);
-            btnCRUD.TabIndex = 8;
+            btnCRUD.TabIndex = 2;
             btnCRUD.Text = "CRUD";
             btnCRUD.UseVisualStyleBackColor = true;
             // 
@@ -121,7 +122,7 @@
             btnExit.Margin = new Padding(4);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(173, 53);
-            btnExit.TabIndex = 9;
+            btnExit.TabIndex = 3;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +130,7 @@
             // 
             grbSearchCriteria.Controls.Add(cboEmployeeName);
             grbSearchCriteria.Controls.Add(mtbPhone);
-            grbSearchCriteria.Controls.Add(maskedTextBox1);
+            grbSearchCriteria.Controls.Add(mtbInvoiceDate);
             grbSearchCriteria.Controls.Add(lblEmployeeName);
             grbSearchCriteria.Controls.Add(lblInvoiceDate);
             grbSearchCriteria.Controls.Add(txtInvoiceId);
@@ -142,17 +143,17 @@
             grbSearchCriteria.Name = "grbSearchCriteria";
             grbSearchCriteria.Padding = new Padding(4);
             grbSearchCriteria.Size = new Size(1261, 223);
-            grbSearchCriteria.TabIndex = 10;
+            grbSearchCriteria.TabIndex = 0;
             grbSearchCriteria.TabStop = false;
             grbSearchCriteria.Text = " Search Criteria ";
             // 
             // cboEmployeeName
             // 
             cboEmployeeName.FormattingEnabled = true;
-            cboEmployeeName.Location = new Point(723, 143);
+            cboEmployeeName.Location = new Point(714, 141);
             cboEmployeeName.Name = "cboEmployeeName";
-            cboEmployeeName.Size = new Size(246, 36);
-            cboEmployeeName.TabIndex = 27;
+            cboEmployeeName.Size = new Size(255, 36);
+            cboEmployeeName.TabIndex = 3;
             // 
             // mtbPhone
             // 
@@ -160,17 +161,17 @@
             mtbPhone.Mask = "0000.000.000";
             mtbPhone.Name = "mtbPhone";
             mtbPhone.Size = new Size(255, 34);
-            mtbPhone.TabIndex = 26;
+            mtbPhone.TabIndex = 1;
             // 
-            // maskedTextBox1
+            // mtbInvoiceDate
             // 
-            maskedTextBox1.Location = new Point(188, 141);
-            maskedTextBox1.Margin = new Padding(4);
-            maskedTextBox1.Mask = "00/00/0000 90:00";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(254, 34);
-            maskedTextBox1.TabIndex = 25;
-            maskedTextBox1.ValidatingType = typeof(DateTime);
+            mtbInvoiceDate.Location = new Point(188, 141);
+            mtbInvoiceDate.Margin = new Padding(4);
+            mtbInvoiceDate.Mask = "00/00/0000 90:00";
+            mtbInvoiceDate.Name = "mtbInvoiceDate";
+            mtbInvoiceDate.Size = new Size(254, 34);
+            mtbInvoiceDate.TabIndex = 2;
+            mtbInvoiceDate.ValidatingType = typeof(DateTime);
             // 
             // lblEmployeeName
             // 
@@ -264,7 +265,7 @@
         private TextBox txtInvoiceId;
         private Label lblPhone;
         private Label lblInvoiceId;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox mtbInvoiceDate;
         private MaskedTextBox mtbPhone;
         private ComboBox cboEmployeeName;
     }
