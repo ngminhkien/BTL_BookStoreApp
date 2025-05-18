@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             grbInvoiceInfo = new GroupBox();
+            txtCustomerId = new TextBox();
             txtNote = new TextBox();
             mtbInvoiceDate = new MaskedTextBox();
             txtEmployeeID = new TextBox();
@@ -45,7 +46,6 @@
             btnPrint = new Button();
             btnCancel = new Button();
             btnDelete = new Button();
-            txtCustomerId = new TextBox();
             grbInvoiceInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBooksInfoDetails).BeginInit();
             SuspendLayout();
@@ -70,6 +70,15 @@
             grbInvoiceInfo.TabIndex = 3;
             grbInvoiceInfo.TabStop = false;
             grbInvoiceInfo.Text = "  Invoice Info ";
+            // 
+            // txtCustomerId
+            // 
+            txtCustomerId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCustomerId.Location = new Point(513, 60);
+            txtCustomerId.Margin = new Padding(4);
+            txtCustomerId.Name = "txtCustomerId";
+            txtCustomerId.Size = new Size(254, 34);
+            txtCustomerId.TabIndex = 26;
             // 
             // txtNote
             // 
@@ -167,6 +176,7 @@
             // 
             // dgvBooksInfoDetails
             // 
+            dgvBooksInfoDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvBooksInfoDetails.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBooksInfoDetails.Location = new Point(16, 379);
             dgvBooksInfoDetails.Margin = new Padding(4);
@@ -244,15 +254,6 @@
             btnDelete.TabIndex = 22;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // txtCustomerId
-            // 
-            txtCustomerId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCustomerId.Location = new Point(513, 60);
-            txtCustomerId.Margin = new Padding(4);
-            txtCustomerId.Name = "txtCustomerId";
-            txtCustomerId.Size = new Size(254, 34);
-            txtCustomerId.TabIndex = 26;
             // 
             // SalesInvoiceDetailForm
             // 
