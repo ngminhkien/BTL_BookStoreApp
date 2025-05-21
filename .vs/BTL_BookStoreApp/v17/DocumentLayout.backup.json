@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\btl_bookstoreapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\btl_bookstoreapp\\billview\\purchaseinvoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\billview\\purchaseinvoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\btl_bookstoreapp\\billview\\salesinvoicedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\billview\\salesinvoicedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\btl_bookstoreapp\\billview\\purchaseinvoicedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\billview\\purchaseinvoicedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\btl_bookstoreapp\\billview\\purchaseinvoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\btl_bookstoreapp\\billview\\purchaseinvoicedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\billview\\purchaseinvoicedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\btl_bookstoreapp\\billview\\purchaseinvoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\billview\\purchaseinvoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\btl_bookstoreapp\\billview\\salesinvoicemainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\billview\\salesinvoicemainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\btl_bookstoreapp\\billview\\salesinvoicedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\billview\\salesinvoicedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281C783D-2A71-4DB5-9BAD-2565E63D387A}|Repositories\\Repositories.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\repositories\\entities\\purchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{281C783D-2A71-4DB5-9BAD-2565E63D387A}|Repositories\\Repositories.csproj|solutionrelative:repositories\\entities\\purchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281C783D-2A71-4DB5-9BAD-2565E63D387A}|Repositories\\Repositories.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\repositories\\entities\\purchaseinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{281C783D-2A71-4DB5-9BAD-2565E63D387A}|Repositories\\Repositories.csproj|solutionrelative:repositories\\entities\\purchaseinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\btl_bookstoreapp\\billview\\salesinvoicemainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\billview\\salesinvoicemainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|c:\\users\\asus\\onedrive\\workspace\\c#\\btl_bookstoreapp\\btl_bookstoreapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}|BTL_BookStoreApp\\BTL_BookStoreApp.csproj|solutionrelative:btl_bookstoreapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,80 +46,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SalesInvoiceDetailForm.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\SalesInvoiceDetailForm.cs",
-              "RelativeDocumentMoniker": "BTL_BookStoreApp\\BillView\\SalesInvoiceDetailForm.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\SalesInvoiceDetailForm.cs",
-              "RelativeToolTip": "BTL_BookStoreApp\\BillView\\SalesInvoiceDetailForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PurchaseInvoiceDetailForm.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\PurchaseInvoiceDetailForm.cs",
+              "RelativeDocumentMoniker": "BTL_BookStoreApp\\BillView\\PurchaseInvoiceDetailForm.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\PurchaseInvoiceDetailForm.cs",
+              "RelativeToolTip": "BTL_BookStoreApp\\BillView\\PurchaseInvoiceDetailForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAACKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T15:44:20.491Z",
+              "WhenOpened": "2025-05-20T06:51:00.279Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PurchaseInvoiceDetail.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\Repositories\\Entities\\PurchaseInvoiceDetail.cs",
-              "RelativeDocumentMoniker": "Repositories\\Entities\\PurchaseInvoiceDetail.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\Repositories\\Entities\\PurchaseInvoiceDetail.cs",
-              "RelativeToolTip": "Repositories\\Entities\\PurchaseInvoiceDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PurchaseInvoiceDetailForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\PurchaseInvoiceDetailForm.cs",
+              "RelativeDocumentMoniker": "BTL_BookStoreApp\\BillView\\PurchaseInvoiceDetailForm.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\PurchaseInvoiceDetailForm.cs [Design]",
+              "RelativeToolTip": "BTL_BookStoreApp\\BillView\\PurchaseInvoiceDetailForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T15:33:46.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PurchaseInvoice.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\Repositories\\Entities\\PurchaseInvoice.cs",
-              "RelativeDocumentMoniker": "Repositories\\Entities\\PurchaseInvoice.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\Repositories\\Entities\\PurchaseInvoice.cs",
-              "RelativeToolTip": "Repositories\\Entities\\PurchaseInvoice.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T15:32:54.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SalesInvoiceDetailForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\SalesInvoiceDetailForm.cs",
-              "RelativeDocumentMoniker": "BTL_BookStoreApp\\BillView\\SalesInvoiceDetailForm.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\SalesInvoiceDetailForm.cs [Design]",
-              "RelativeToolTip": "BTL_BookStoreApp\\BillView\\SalesInvoiceDetailForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T14:22:10.413Z",
+              "WhenOpened": "2025-05-19T17:36:50.597Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SalesInvoiceMainUI.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\SalesInvoiceMainUI.cs",
-              "RelativeDocumentMoniker": "BTL_BookStoreApp\\BillView\\SalesInvoiceMainUI.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\SalesInvoiceMainUI.cs [Design]",
-              "RelativeToolTip": "BTL_BookStoreApp\\BillView\\SalesInvoiceMainUI.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T14:21:56.604Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\Program.cs",
-              "RelativeDocumentMoniker": "BTL_BookStoreApp\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\Program.cs",
-              "RelativeToolTip": "BTL_BookStoreApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PurchaseInvoiceForm.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\PurchaseInvoiceForm.cs",
+              "RelativeDocumentMoniker": "BTL_BookStoreApp\\BillView\\PurchaseInvoiceForm.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\PurchaseInvoiceForm.cs",
+              "RelativeToolTip": "BTL_BookStoreApp\\BillView\\PurchaseInvoiceForm.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAmwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T04:08:26.496Z",
+              "WhenOpened": "2025-05-19T14:14:25.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PurchaseInvoiceForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\PurchaseInvoiceForm.cs",
               "RelativeDocumentMoniker": "BTL_BookStoreApp\\BillView\\PurchaseInvoiceForm.cs",
@@ -143,15 +96,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SalesInvoiceMainUI.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\SalesInvoiceMainUI.cs",
-              "RelativeDocumentMoniker": "BTL_BookStoreApp\\BillView\\SalesInvoiceMainUI.cs",
-              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\BillView\\SalesInvoiceMainUI.cs",
-              "RelativeToolTip": "BTL_BookStoreApp\\BillView\\SalesInvoiceMainUI.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\Program.cs",
+              "RelativeDocumentMoniker": "BTL_BookStoreApp\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Workspace\\C#\\BTL_BookStoreApp\\BTL_BookStoreApp\\Program.cs",
+              "RelativeToolTip": "BTL_BookStoreApp\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T13:30:29.969Z"
+              "WhenOpened": "2025-04-24T04:08:26.496Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -59,7 +59,7 @@ namespace BTL_BookStoreApp.BillView
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvSalesInvoiceList.DataSource = null;
+            dgvSalesInvoiceList.DataSource = null; 
             // Lấy dữ liệu từ các ô nhập
             string inlId = txtInvoiceId.Text;
             //fix DateTime?
