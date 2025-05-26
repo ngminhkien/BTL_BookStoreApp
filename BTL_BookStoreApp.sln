@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTL_BookStoreApp", "BTL_BookStoreApp\BTL_BookStoreApp.csproj", "{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{281C783D-2A71-4DB5-9BAD-2565E63D387A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{123A113F-935F-435A-A61F-8F518B0386DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EFE33C7-E05A-4E16-97ED-2E2AB8FA06D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{281C783D-2A71-4DB5-9BAD-2565E63D387A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{281C783D-2A71-4DB5-9BAD-2565E63D387A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{281C783D-2A71-4DB5-9BAD-2565E63D387A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{281C783D-2A71-4DB5-9BAD-2565E63D387A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{123A113F-935F-435A-A61F-8F518B0386DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123A113F-935F-435A-A61F-8F518B0386DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123A113F-935F-435A-A61F-8F518B0386DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123A113F-935F-435A-A61F-8F518B0386DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
