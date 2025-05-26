@@ -42,6 +42,7 @@
             btnSaveAndLogin = new Button();
             btnCancel = new Button();
             label1 = new Label();
+            lblRule = new Label();
             grbUserAccountInfo.SuspendLayout();
             SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             // 
             // grbUserAccountInfo
             // 
+            grbUserAccountInfo.Controls.Add(lblRule);
             grbUserAccountInfo.Controls.Add(txtConfirmPassword);
             grbUserAccountInfo.Controls.Add(lblConfirmPassword);
             grbUserAccountInfo.Controls.Add(lblIdName);
@@ -79,7 +81,7 @@
             txtConfirmPassword.Location = new Point(312, 273);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.PasswordChar = '*';
-            txtConfirmPassword.Size = new Size(228, 34);
+            txtConfirmPassword.Size = new Size(163, 34);
             txtConfirmPassword.TabIndex = 8;
             // 
             // lblConfirmPassword
@@ -106,7 +108,7 @@
             txtPassword.Location = new Point(312, 213);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '!';
-            txtPassword.Size = new Size(228, 34);
+            txtPassword.Size = new Size(163, 34);
             txtPassword.TabIndex = 5;
             // 
             // lblPassword
@@ -123,14 +125,14 @@
             // 
             txtEmail.Location = new Point(312, 158);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(228, 34);
+            txtEmail.Size = new Size(276, 34);
             txtEmail.TabIndex = 1;
             // 
             // txtMemberID
             // 
             txtMemberID.Location = new Point(312, 99);
             txtMemberID.Name = "txtMemberID";
-            txtMemberID.Size = new Size(228, 34);
+            txtMemberID.Size = new Size(163, 34);
             txtMemberID.TabIndex = 0;
             // 
             // lblMemberID
@@ -189,6 +191,17 @@
             label1.TabIndex = 14;
             label1.Text = "© 2025 B_C_H_K_T";
             // 
+            // lblRule
+            // 
+            lblRule.AutoSize = true;
+            lblRule.BackColor = Color.White;
+            lblRule.ForeColor = Color.Red;
+            lblRule.Location = new Point(481, 219);
+            lblRule.Name = "lblRule";
+            lblRule.Size = new Size(107, 28);
+            lblRule.TabIndex = 10;
+            lblRule.Text = "Tối đa 5 kí ";
+            // 
             // UserAccountForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -224,5 +237,6 @@
         private TextBox txtConfirmPassword;
         private Label lblConfirmPassword;
         private Label label1;
+        private Label lblRule;
     }
 }

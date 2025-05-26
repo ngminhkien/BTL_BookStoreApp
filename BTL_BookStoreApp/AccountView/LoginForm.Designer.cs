@@ -46,9 +46,9 @@
             lblBookManager.Font = new Font("Segoe UI", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lblBookManager.Location = new Point(231, 40);
             lblBookManager.Name = "lblBookManager";
-            lblBookManager.Size = new Size(445, 81);
+            lblBookManager.Size = new Size(294, 81);
             lblBookManager.TabIndex = 2;
-            lblBookManager.Text = "Book Manager";
+            lblBookManager.Text = "Welcome";
             // 
             // grbAccountInfo
             // 
@@ -83,7 +83,7 @@
             txtPassword.Location = new Point(288, 104);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '$';
-            txtPassword.Size = new Size(261, 34);
+            txtPassword.Size = new Size(295, 34);
             txtPassword.TabIndex = 1;
             // 
             // txtEmail
@@ -91,7 +91,7 @@
             txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.Location = new Point(288, 52);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(261, 34);
+            txtEmail.Size = new Size(295, 34);
             txtEmail.TabIndex = 0;
             // 
             // lblPassword

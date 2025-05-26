@@ -17,6 +17,7 @@ namespace BTL_BookStoreApp.MenuView
 {
     public partial class MenuForm : Form
     {
+        public string _accountInfo;
         public int flag = 1;
         private LoginForm loginForm;
         public MenuForm()
@@ -53,7 +54,7 @@ namespace BTL_BookStoreApp.MenuView
             // Mục 1: Tài khoản Google
             Label lblAccount = new Label()
             {
-                Text = "Tài khoản",
+                Text = "Account",
                 AutoSize = false,
                 Size = new Size(180, 30),
                 Location = new Point(10, y),
@@ -62,7 +63,7 @@ namespace BTL_BookStoreApp.MenuView
             };
             lblAccount.MouseEnter += (s, e) => lblAccount.BackColor = Color.Gainsboro;
             lblAccount.MouseLeave += (s, e) => lblAccount.BackColor = Color.Transparent;
-            lblAccount.Click += (s, e) => MessageBox.Show("Tài khoản Google");
+            lblAccount.Click += (s, e) => MessageBox.Show(_accountInfo);
             panel.Controls.Add(lblAccount);
             y += 40;
 
@@ -71,7 +72,7 @@ namespace BTL_BookStoreApp.MenuView
             {
                 Label lblManageAccount = new Label()
                 {
-                    Text = "Quản lý tài khoản",
+                    Text = "Account Managerment",
                     AutoSize = false,
                     Size = new Size(180, 30),
                     Location = new Point(10, y),
@@ -80,7 +81,7 @@ namespace BTL_BookStoreApp.MenuView
                 };
                 lblManageAccount.MouseEnter += (s, e) => lblManageAccount.BackColor = Color.Gainsboro;
                 lblManageAccount.MouseLeave += (s, e) => lblManageAccount.BackColor = Color.Transparent;
-                lblManageAccount.Click += (s, e) => 
+                lblManageAccount.Click += (s, e) =>
                 {
                     EmployeeMainUI f = new EmployeeMainUI();
                     f.ShowDialog();
@@ -90,7 +91,7 @@ namespace BTL_BookStoreApp.MenuView
 
                 Label lblStatistics = new Label()
                 {
-                    Text = "Thống kê",
+                    Text = "Analytics",
                     AutoSize = false,
                     Size = new Size(180, 30),
                     Location = new Point(10, y),
@@ -99,7 +100,11 @@ namespace BTL_BookStoreApp.MenuView
                 };
                 lblStatistics.MouseEnter += (s, e) => lblStatistics.BackColor = Color.Gainsboro;
                 lblStatistics.MouseLeave += (s, e) => lblStatistics.BackColor = Color.Transparent;
-                lblStatistics.Click += (s, e) => MessageBox.Show("Thống kê");
+                lblStatistics.Click += (s, e) => 
+                {
+                    StatisticAllChartForm f = new StatisticAllChartForm();
+                    f.ShowDialog();
+                };
                 panel.Controls.Add(lblStatistics);
                 y += 40;
             }
@@ -107,7 +112,7 @@ namespace BTL_BookStoreApp.MenuView
             // Mục cuối: Đăng xuất
             Label lblLogout = new Label()
             {
-                Text = "Đăng xuất",
+                Text = "Logout",
                 AutoSize = false,
                 Size = new Size(180, 30),
                 Location = new Point(10, y),
@@ -116,7 +121,7 @@ namespace BTL_BookStoreApp.MenuView
             };
             lblLogout.MouseEnter += (s, e) => lblLogout.BackColor = Color.Gainsboro;
             lblLogout.MouseLeave += (s, e) => lblLogout.BackColor = Color.Transparent;
-            lblLogout.Click += (s, e) => 
+            lblLogout.Click += (s, e) =>
             {
                 if (MessageBox.Show("Do you really want to logout", "Logout confirm?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     Close();
@@ -163,7 +168,7 @@ namespace BTL_BookStoreApp.MenuView
         {
             PurchaseInvoiceForm f = new();
             f.ShowDialog();
-        }      
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -197,6 +202,11 @@ namespace BTL_BookStoreApp.MenuView
         private void ptbAvatar_Click(object sender, EventArgs e)
         {
             ShowCustomDropDown(ptbAvatar);
+        }
+
+        private void cboMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

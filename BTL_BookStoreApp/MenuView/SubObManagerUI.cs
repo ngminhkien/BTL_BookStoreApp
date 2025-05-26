@@ -45,18 +45,22 @@ namespace BTL_BookStoreApp
             switch (flag)
             {
                 case 1:
+                    lblBookManager.Text = "Author Manager";
                     dgvBookList.DataSource = null;
                     dgvBookList.DataSource = _aService.GetAll();
                     break;
                 case 2:
+                    lblBookManager.Text = "Bookcategory Manager";
                     dgvBookList.DataSource = null;
                     dgvBookList.DataSource = _bService.GetAll();
                     break;
                 case 3:
+                    lblBookManager.Text = "Publisher Manager";
                     dgvBookList.DataSource = null;
                     dgvBookList.DataSource = _pService.GetAll();
                     break;
                 case 4:
+                    lblBookManager.Text = "Supplier Manager";
                     dgvBookList.DataSource = null;
                     dgvBookList.DataSource = _sService.GetAll();
                     break;

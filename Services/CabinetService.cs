@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +33,10 @@ namespace Services
         public void Update(T item)
         {
             _repo.Update(item);
+        }
+        public List<T> GetAllWithInclude(params Expression<Func<T, object>>[] includeExpressions)
+        {
+            return _repo.GetAllWithInclude(includeExpressions);
         }
     }
 }

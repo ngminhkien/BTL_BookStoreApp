@@ -61,7 +61,7 @@
             grbEmployeeInfo.Location = new Point(94, 176);
             grbEmployeeInfo.Name = "grbEmployeeInfo";
             grbEmployeeInfo.Size = new Size(683, 245);
-            grbEmployeeInfo.TabIndex = 3;
+            grbEmployeeInfo.TabIndex = 0;
             grbEmployeeInfo.TabStop = false;
             grbEmployeeInfo.Text = "Employee Info ";
             // 
@@ -106,7 +106,7 @@
             btnCreateAndContinue.Margin = new Padding(4);
             btnCreateAndContinue.Name = "btnCreateAndContinue";
             btnCreateAndContinue.Size = new Size(201, 53);
-            btnCreateAndContinue.TabIndex = 4;
+            btnCreateAndContinue.TabIndex = 1;
             btnCreateAndContinue.Text = "Save and Continue";
             btnCreateAndContinue.UseVisualStyleBackColor = true;
             btnCreateAndContinue.Click += btnCreateAndContinue_Click;
@@ -118,7 +118,7 @@
             btnCancel.Margin = new Padding(4);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(173, 53);
-            btnCancel.TabIndex = 5;
+            btnCancel.TabIndex = 2;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;

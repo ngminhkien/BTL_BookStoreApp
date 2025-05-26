@@ -69,12 +69,16 @@ namespace BTL_BookStoreApp
             {
                 BookDetailForm f = new();
                 f.SelectedBook = _selectedABook;
-                f.ShowDialog();
 
-                FillDataGridView();
+                if (f.ShowDialog() == DialogResult.OK)  // kiểm tra nếu đã lưu
+                {
+                    FillDataGridView(); // Chỉ làm mới khi thực sự có cập nhật
+                }
             }
             else
+            {
                 MessageBox.Show("Please select a certain book to edit!!", "Select one book", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void dgvBookList_SelectionChanged(object sender, EventArgs e)

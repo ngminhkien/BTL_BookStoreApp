@@ -106,9 +106,9 @@
             lblBookManager.Location = new Point(13, 27);
             lblBookManager.Margin = new Padding(4, 0, 4, 0);
             lblBookManager.Name = "lblBookManager";
-            lblBookManager.Size = new Size(445, 81);
+            lblBookManager.Size = new Size(430, 81);
             lblBookManager.TabIndex = 6;
-            lblBookManager.Text = "Book Manager";
+            lblBookManager.Text = "Item Manager";
             // 
             // label1
             // 

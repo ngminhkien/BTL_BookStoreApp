@@ -80,9 +80,9 @@
             lblBookManager.Location = new Point(1, -1);
             lblBookManager.Margin = new Padding(4, 0, 4, 0);
             lblBookManager.Name = "lblBookManager";
-            lblBookManager.Size = new Size(445, 81);
+            lblBookManager.Size = new Size(573, 81);
             lblBookManager.TabIndex = 7;
-            lblBookManager.Text = "Book Manager";
+            lblBookManager.Text = "Employee Manager";
             // 
             // btnCancel
             // 

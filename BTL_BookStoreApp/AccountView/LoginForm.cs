@@ -39,6 +39,7 @@ namespace BTL_BookStoreApp
             }
 
             MenuForm f = new MenuForm();
+            f._accountInfo = txtEmail.Text;
             if (acc.Role == 1 || acc.Role == 2)
             {
                 f.flag = 1;

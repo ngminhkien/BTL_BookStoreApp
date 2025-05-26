@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
+using Repositories;
 using Repositories.Entities;
 using Services;
 
@@ -44,7 +47,12 @@ namespace BTL_BookStoreApp.AccountView
         private void btnSaveAndLogin_Click(object sender, EventArgs e)
         {
             if (!BoxHelper.IsValidInput(txtEmail, txtPassword, txtConfirmPassword)) return;
-            if (txtConfirmPassword.Text !=  txtPassword.Text)
+            if (txtPassword.Text.Length > 5)
+            {
+                MessageBox.Show("Password.length < 5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtConfirmPassword.Text != txtPassword.Text)
             {
                 MessageBox.Show("Password does not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -56,13 +64,15 @@ namespace BTL_BookStoreApp.AccountView
                 EmployeeName = _employee.EmployeeName,
             };
 
-            
+            //mã hóa
+            string inputPassword = txtPassword.Text;
+            string hashedPassword = PasswordHelper.HashPassword(inputPassword);
 
             UserAccount account = new UserAccount()
             {
                 MemberId = int.Parse(txtMemberID.Text),
                 Email = txtEmail.Text,
-                Password = txtPassword.Text,
+                Password = hashedPassword,
                 EmployeeId = _employee.EmployeeId,
                 Role = 3
             };
@@ -70,7 +80,7 @@ namespace BTL_BookStoreApp.AccountView
             //{
                 _eService.Add(employee);
                 _uService.Add(account);
-                MessageBox.Show("Add new a employee successfull", "Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Add new a employee successfull", "Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Close();
             //}

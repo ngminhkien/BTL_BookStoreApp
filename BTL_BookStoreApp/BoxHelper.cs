@@ -16,7 +16,7 @@ namespace BTL_BookStoreApp
             List<T> source,
             Func<T, string> getId,
             Func<T, string> getName,
-            string specialItemName = "Khác...")
+            string specialItemName = "Other...")
         {
             var items = source
                 .Select(item => new SpecialItem
@@ -43,7 +43,7 @@ namespace BTL_BookStoreApp
             List<T> source,
             Func<T, string> getId,
             Func<T, string> getName,
-            string specialItemName = "Khác...")
+            string specialItemName = "Other...")
         {
             List<SpecialItem> items = new();
             items.Add(new SpecialItem

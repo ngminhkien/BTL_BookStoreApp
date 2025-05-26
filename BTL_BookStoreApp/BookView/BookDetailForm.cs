@@ -18,6 +18,7 @@ namespace BTL_BookStoreApp.Book
     public partial class BookDetailForm : Form
     {
         public Repositories.Entities.Book? SelectedBook { get; set; } = null;
+        CabinetService<Repositories.Entities.Book> service = new();
 
         public BookDetailForm()
         {
@@ -30,7 +31,7 @@ namespace BTL_BookStoreApp.Book
 
             comboBox.LoadToComboBox<Author>(cboAuthor, new CabinetService<Author>().GetAll(), a => a.AuthorId, a => a.AuthorName ?? "N");
             comboBox.LoadToComboBox<Publisher>(cboPublisher, new CabinetService<Publisher>().GetAll(), a => a.PublisherId, a => a.PublisherName ?? "N");
-            comboBox.LoadToComboBox<BookCategory>(cboBookCategory, new CabinetService<BookCategory>().GetAll(), a => a.BookCategoryId.ToString(), a => a.BookGenreType);
+            comboBox.LoadToComboBox<BookCategory>(cboBookCategory, new CabinetService<BookCategory>().GetAll(), a => a.BookCategoryId.ToString(), a => a.BookGenreType ?? "N");
 
             txtBookId.Enabled = false;
             txtSellPrince.Enabled = false;
@@ -136,6 +137,7 @@ namespace BTL_BookStoreApp.Book
                         }
                     }
                 }
+
             }
         }
 
@@ -162,11 +164,12 @@ namespace BTL_BookStoreApp.Book
                 PublisherId = cboPublisher?.SelectedValue?.ToString(),
                 BookCategoryId = int.Parse(cboBookCategory?.SelectedValue?.ToString() ?? "N"),
             };
-            CabinetService<Repositories.Entities.Book> service = new();
+            
             if (SelectedBook != null)
                 service.Update(book);
             else
                 service.Add(book);
+            this.DialogResult = DialogResult.OK;
             Close();
         }
 

@@ -37,10 +37,10 @@
             btnCRUD = new Button();
             pnlUtils = new Panel();
             pnlNameStore = new Panel();
+            label1 = new Label();
             ptbAvatar = new PictureBox();
             pnlLogo = new Panel();
             panel4 = new Panel();
-            label1 = new Label();
             pnlUtils.SuspendLayout();
             pnlNameStore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbAvatar).BeginInit();
@@ -51,11 +51,12 @@
             cboMenu.BackColor = Color.DimGray;
             cboMenu.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboMenu.FormattingEnabled = true;
-            cboMenu.Location = new Point(24, 480);
+            cboMenu.Location = new Point(21, 390);
             cboMenu.Margin = new Padding(4);
             cboMenu.Name = "cboMenu";
             cboMenu.Size = new Size(209, 36);
             cboMenu.TabIndex = 16;
+            cboMenu.SelectedIndexChanged += cboMenu_SelectedIndexChanged;
             // 
             // btnBook
             // 
@@ -116,7 +117,7 @@
             // 
             btnCRUD.BackColor = Color.Gray;
             btnCRUD.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCRUD.Location = new Point(6, 396);
+            btnCRUD.Location = new Point(2, 436);
             btnCRUD.Margin = new Padding(6);
             btnCRUD.Name = "btnCRUD";
             btnCRUD.Size = new Size(238, 74);
@@ -150,6 +151,16 @@
             pnlNameStore.Size = new Size(1040, 130);
             pnlNameStore.TabIndex = 25;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Showcard Gothic", 52.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(179, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(572, 109);
+            label1.TabIndex = 1;
+            label1.Text = "Book Store";
+            // 
             // ptbAvatar
             // 
             ptbAvatar.BackColor = SystemColors.Control;
@@ -179,21 +190,11 @@
             panel4.Size = new Size(1040, 665);
             panel4.TabIndex = 26;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Showcard Gothic", 52.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(179, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(572, 109);
-            label1.TabIndex = 1;
-            label1.Text = "Book Store";
-            // 
             // MenuForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1294, 801);
+            ClientSize = new Size(1294, 799);
             Controls.Add(panel4);
             Controls.Add(pnlLogo);
             Controls.Add(pnlNameStore);

@@ -121,6 +121,7 @@ namespace BTL_BookStoreApp.Book
             dtpPubDate.Name = "dtpPubDate";
             dtpPubDate.Size = new Size(185, 34);
             dtpPubDate.TabIndex = 13;
+            cboBookCategory.SelectedIndexChanged += cboBookCategory_SelectedIndexChanged;
             // 
             // cboAuthor
             // 
@@ -142,7 +143,7 @@ namespace BTL_BookStoreApp.Book
             // 
             // txtSellPrince
             // 
-            txtSellPrince.Location = new Point(636, 314);
+            txtSellPrince.Location = new Point(636, 315);
             txtSellPrince.Name = "txtSellPrince";
             txtSellPrince.Size = new Size(125, 34);
             txtSellPrince.TabIndex = 6;
@@ -153,9 +154,9 @@ namespace BTL_BookStoreApp.Book
             lblSellPrince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblSellPrince.Location = new Point(527, 318);
             lblSellPrince.Name = "lblSellPrince";
-            lblSellPrince.Size = new Size(103, 28);
+            lblSellPrince.Size = new Size(92, 28);
             lblSellPrince.TabIndex = 9;
-            lblSellPrince.Text = "SelltPrince";
+            lblSellPrince.Text = "SelltPrice";
             // 
             // txtDescription
             // 
@@ -251,7 +252,7 @@ namespace BTL_BookStoreApp.Book
             // 
             lblQuantity.AutoSize = true;
             lblQuantity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQuantity.Location = new Point(11, 311);
+            lblQuantity.Location = new Point(11, 318);
             lblQuantity.Name = "lblQuantity";
             lblQuantity.RightToLeft = RightToLeft.No;
             lblQuantity.Size = new Size(88, 28);
@@ -282,11 +283,11 @@ namespace BTL_BookStoreApp.Book
             // 
             lblImportPrince.AutoSize = true;
             lblImportPrince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblImportPrince.Location = new Point(256, 314);
+            lblImportPrince.Location = new Point(278, 317);
             lblImportPrince.Name = "lblImportPrince";
-            lblImportPrince.Size = new Size(125, 28);
+            lblImportPrince.Size = new Size(114, 28);
             lblImportPrince.TabIndex = 10;
-            lblImportPrince.Text = "ImportPrince";
+            lblImportPrince.Text = "ImportPrice";
             // 
             // btnSave
             // 

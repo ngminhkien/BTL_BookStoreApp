@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Repositories.Entities;
 
 namespace Repositories
 {
@@ -21,7 +23,7 @@ namespace Repositories
         public List<T> GetAll()
         {
             DbSet<T> dbSet = _context.Set<T>();
-            return dbSet.ToList();
+            return dbSet.AsNoTracking().ToList();
         }
 
         public void Add(T entity)
@@ -44,6 +46,19 @@ namespace Repositories
             dbSet.Remove(entity);
             _context.SaveChanges();
         }
+        public List<T> GetAllWithInclude(params Expression<Func<T, object>>[] includeExpressions)
+        {
+            IQueryable<T> query = _context.Set<T>();
+
+            foreach (var includeExpression in includeExpressions)
+            {
+                query = query.Include(includeExpression);
+            }
+
+            return query.ToList();
+        }
+
+
     }
 
 }
