@@ -15,6 +15,7 @@ namespace BTL_BookStoreApp.BookView
     public partial class BookCategoryDetailForm : Form
     {
         public BookCategory SelectedBookCategory { get; set; } = null;
+        CabinetService<BookCategory> service = new();
         public BookCategoryDetailForm()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace BTL_BookStoreApp.BookView
                 BookGenreType = txtBookGenreType.Text,
                 Description = txtDescription.Text
             };
-            CabinetService<BookCategory> service = new();
+            
             if (SelectedBookCategory != null)
                 service.Update(category);
             else
@@ -65,7 +66,7 @@ namespace BTL_BookStoreApp.BookView
             {
                 lblHeader.Text = "Create a new Book Category...";
                 List<int> arr = new CabinetService<BookCategory>().GetAll().Select(a => a.BookCategoryId).ToList();
-                txtBookCategoryId.Text = Mytoys.FindMax(arr).ToString();
+                txtBookCategoryId.Text = (Mytoys.FindMax(arr) + 1).ToString();
             }
         }
     }

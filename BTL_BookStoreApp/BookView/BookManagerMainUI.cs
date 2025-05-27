@@ -108,6 +108,23 @@ namespace BTL_BookStoreApp
             DialogResult answer = MessageBox.Show("Do you really want to delete this book", "Delete confirm?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (answer == DialogResult.No)
                 return;
+
+            //khóa trong hóa đơn nhập
+            bool inUse1 = BoxHelper.IsForeignKeyInUse<PurchaseInvoiceDetail>(b => b.BookId == _selectedABook.BookId);
+            if (inUse1)
+            {
+                MessageBox.Show("This book is a foreign key, Can not bt deleted!");
+                return;
+            }
+
+            bool inUse2 = BoxHelper.IsForeignKeyInUse<SalesInvoiceDetail>(b => b.BookId == _selectedABook.BookId);
+            if (inUse2)
+            {
+                MessageBox.Show("This book is a foreign key, Can not bt deleted!");
+                return;
+            }
+
+
             _service.Remove(_selectedABook);
             FillDataGridView();
             _selectedABook = null;

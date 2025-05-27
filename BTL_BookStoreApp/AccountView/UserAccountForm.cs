@@ -47,9 +47,9 @@ namespace BTL_BookStoreApp.AccountView
         private void btnSaveAndLogin_Click(object sender, EventArgs e)
         {
             if (!BoxHelper.IsValidInput(txtEmail, txtPassword, txtConfirmPassword)) return;
-            if (txtPassword.Text.Length > 5)
+            if (txtPassword.Text.Length > 3)
             {
-                MessageBox.Show("Password.length < 5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Password.length < 3", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (txtConfirmPassword.Text != txtPassword.Text)

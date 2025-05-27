@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Repositories.Entities;
 using Services;
 
@@ -37,6 +38,8 @@ namespace BTL_BookStoreApp.AccountView
         {
             EmployeeForm_hadMistakes f = new();
             f.ShowDialog();
+
+            FillDataGridView();
         }
 
         private void dgvEmployeeList_SelectionChanged(object sender, EventArgs e)
@@ -59,6 +62,14 @@ namespace BTL_BookStoreApp.AccountView
             DialogResult answer = MessageBox.Show("Do you really want to delete this employee", "Delete confirm?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (answer == DialogResult.No)
                 return;
+
+            bool inUse = BoxHelper.IsForeignKeyInUse<SalesInvoice >(b => b.EmployeeId == _selectedAEmployee.EmployeeId);
+            if (inUse)
+            {
+                MessageBox.Show("This employee is a foreign key, Can not bt deleted!");
+                return;
+            }
+
             UserAccount userAccount = _uService.GetAll().FirstOrDefault(a => a.EmployeeId == _selectedAEmployee.EmployeeId);
             _uService.Remove(userAccount);
             _service.Remove(_selectedAEmployee);

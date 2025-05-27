@@ -20,6 +20,7 @@ namespace BTL_BookStoreApp.BookView
     {
 
         public Author SelectedAuthor { get; set; } = null;
+        CabinetService<Author> service = new();
         public AuthorDetailForm()
         {
             InitializeComponent();
@@ -38,7 +39,8 @@ namespace BTL_BookStoreApp.BookView
                 Gender = cboGender.Text,
                 Address = txtAddress.Text
             };
-            CabinetService<Author> service = new();
+
+
             if (SelectedAuthor != null)
                 service.Update(author);
             else

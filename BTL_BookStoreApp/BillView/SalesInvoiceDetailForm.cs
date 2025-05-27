@@ -59,6 +59,7 @@ namespace BTL_BookStoreApp.BillView
             BoxHelper comboBox = new();
             txtInvoiceId.Enabled = false;
             mtbInvoiceDate.Enabled = false;
+            txtTotal.Enabled = false;
             //đổ dữ liệu vào comboBox
             cboEmployeeID.DataSource = new CabinetService<Employee>().GetAll();
             cboEmployeeID.DisplayMember = "EmployeeId"; // hoặc e => e.EmployeeName nếu muốn hiển thị tên
@@ -86,7 +87,7 @@ namespace BTL_BookStoreApp.BillView
 
             // ~ flag = 2
             lblHeader.Text = "Update a Sales Invoice...";
-            lblReport.Text = "Nhập vào ô Quantity để chỉnh số lượng, mỗi loại mua tồi đa 10 cuốn";
+            lblReport.Text = "Nhập vào ô Quantity để chỉnh số lượng";
             if (dgvBooksInfoDetails.Columns.Contains("Quantity"))
                 dgvBooksInfoDetails.Columns["Quantity"].ReadOnly = false;
 

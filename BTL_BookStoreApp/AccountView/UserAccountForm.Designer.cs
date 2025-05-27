@@ -30,6 +30,7 @@
         {
             lblHeader = new Label();
             grbUserAccountInfo = new GroupBox();
+            lblRule = new Label();
             txtConfirmPassword = new TextBox();
             lblConfirmPassword = new Label();
             lblIdName = new Label();
@@ -42,7 +43,6 @@
             btnSaveAndLogin = new Button();
             btnCancel = new Button();
             label1 = new Label();
-            lblRule = new Label();
             grbUserAccountInfo.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +75,17 @@
             grbUserAccountInfo.TabIndex = 4;
             grbUserAccountInfo.TabStop = false;
             grbUserAccountInfo.Text = "User Account Info ";
+            // 
+            // lblRule
+            // 
+            lblRule.AutoSize = true;
+            lblRule.BackColor = Color.White;
+            lblRule.ForeColor = Color.Red;
+            lblRule.Location = new Point(481, 219);
+            lblRule.Name = "lblRule";
+            lblRule.Size = new Size(107, 28);
+            lblRule.TabIndex = 10;
+            lblRule.Text = "Tối đa 3 kí ";
             // 
             // txtConfirmPassword
             // 
@@ -163,7 +174,7 @@
             btnSaveAndLogin.Name = "btnSaveAndLogin";
             btnSaveAndLogin.Size = new Size(201, 53);
             btnSaveAndLogin.TabIndex = 8;
-            btnSaveAndLogin.Text = "Save and Login";
+            btnSaveAndLogin.Text = "Save";
             btnSaveAndLogin.UseVisualStyleBackColor = true;
             btnSaveAndLogin.Click += btnSaveAndLogin_Click;
             // 
@@ -190,17 +201,6 @@
             label1.Size = new Size(181, 30);
             label1.TabIndex = 14;
             label1.Text = "© 2025 B_C_H_K_T";
-            // 
-            // lblRule
-            // 
-            lblRule.AutoSize = true;
-            lblRule.BackColor = Color.White;
-            lblRule.ForeColor = Color.Red;
-            lblRule.Location = new Point(481, 219);
-            lblRule.Name = "lblRule";
-            lblRule.Size = new Size(107, 28);
-            lblRule.TabIndex = 10;
-            lblRule.Text = "Tối đa 5 kí ";
             // 
             // UserAccountForm
             // 

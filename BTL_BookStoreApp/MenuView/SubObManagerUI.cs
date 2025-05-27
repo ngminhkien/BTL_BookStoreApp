@@ -213,6 +213,15 @@ namespace BTL_BookStoreApp
                     DialogResult answer1 = MessageBox.Show("Do you really want to delete this item", "Delete confirm?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (answer1 == DialogResult.No)
                         return;
+                    //khóa ngoại
+                    bool inUse1 = BoxHelper.IsForeignKeyInUse<Repositories.Entities.Book>(b => b.AuthorId == _author.AuthorId);
+
+                    if (inUse1)
+                    {
+                        MessageBox.Show("This author is a foreign key, Can not bt deleted!");
+                        return;
+                    }
+
                     _aService.Remove(_author);
                     dgvBookList.DataSource = null;
                     dgvBookList.DataSource = _aService.GetAll();
@@ -227,6 +236,16 @@ namespace BTL_BookStoreApp
                     DialogResult answer2 = MessageBox.Show("Do you really want to delete this item", "Delete confirm?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (answer2 == DialogResult.No)
                         return;
+
+                    //khóa ngoại
+                    bool inUse2 = BoxHelper.IsForeignKeyInUse<Repositories.Entities.Book>(b => b.BookCategoryId == _bookCategory.BookCategoryId);
+
+                    if (inUse2)
+                    {
+                        MessageBox.Show("This Book category is a foreign key, Can not bt deleted!");
+                        return;
+                    }
+
                     _bService.Remove(_bookCategory);
                     dgvBookList.DataSource = null;
                     dgvBookList.DataSource = _bService.GetAll();
@@ -241,6 +260,14 @@ namespace BTL_BookStoreApp
                     DialogResult answer3 = MessageBox.Show("Do you really want to delete this item", "Delete confirm?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (answer3 == DialogResult.No)
                         return;
+
+                    bool inUse3 = BoxHelper.IsForeignKeyInUse<Repositories.Entities.Book>(b => b.PublisherId == _publisher.PublisherId);
+                    if (inUse3)
+                    {
+                        MessageBox.Show("This Publisher is a foreign key, Can not bt deleted!");
+                        return;
+                    }
+
                     _pService.Remove(_publisher);
                     dgvBookList.DataSource = null;
                     dgvBookList.DataSource = _pService.GetAll();
@@ -255,6 +282,14 @@ namespace BTL_BookStoreApp
                     DialogResult answer4 = MessageBox.Show("Do you really want to delete this item", "Delete confirm?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (answer4 == DialogResult.No)
                         return;
+
+                    bool inUse4 = BoxHelper.IsForeignKeyInUse<PurchaseInvoice>(b => b.SupplierId == _supplier.SupplierId);
+                    if (inUse4)
+                    {
+                        MessageBox.Show("This Supplier is a foreign key, Can not bt deleted!");
+                        return;
+                    }
+
                     _sService.Remove(_supplier);
                     dgvBookList.DataSource = null;
                     dgvBookList.DataSource = _sService.GetAll();

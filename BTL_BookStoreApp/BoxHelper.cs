@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Repositories;
+using Services;
 
 namespace BTL_BookStoreApp
 {
@@ -74,8 +75,14 @@ namespace BTL_BookStoreApp
         //hàm xử lí Datetime?
         public static DateTime? ParseFromMaskedTextBox(MaskedTextBox mtb)
         {
+            string input = mtb.Text.Trim();
+
+            // Nếu trống hoặc không đủ ký tự → trả về null
+            if (string.IsNullOrWhiteSpace(input) || input.Contains("_"))
+                return null;
+
             if (DateTime.TryParseExact(
-                    mtb.Text.Trim(),
+                    input,
                     "MM/dd/yyyy HH:mm",
                     CultureInfo.InvariantCulture,
                     DateTimeStyles.None,
@@ -83,7 +90,8 @@ namespace BTL_BookStoreApp
             {
                 return result;
             }
-            throw new FormatException("Incorrect format MM/dd/yyyy HH:mm.");
+
+            return null; // không đúng định dạng thì trả về null thay vì throw
         }
 
         //hàm báo lỗi phone
@@ -131,8 +139,21 @@ namespace BTL_BookStoreApp
         }
 
         //if (!IsValidInput(txtName, txtPhone, txtAddress)) return;
-        
 
-    }
+        //hàm check khóa ngoại
+        public static bool IsForeignKeyInUse<TChild>(Func<TChild, bool> predicate)
+    where TChild : class
+        {
+            return new CabinetService<TChild>().GetAll().Any(predicate);
+        }
+
+//        bool inUse = IsForeignKeyInUse<Book>(b => b.AuthorId == selectedAuthor.AuthorId);
+
+//if (inUse)
+//{
+//    MessageBox.Show("Tác giả này đang được sử dụng, không thể xóa!");
+//    return;
+//}
+}
 }
 
